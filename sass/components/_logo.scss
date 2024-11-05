@@ -1,0 +1,29 @@
+@import "utils/mixins";
+
+.logo {
+  padding: 15.5px 0;
+
+  display: flex;
+  align-items: center;
+
+  font-family: $font-logo;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  @include onTablet {
+    padding: 0;
+  }
+
+  @include onDesktop {
+    padding: 0;
+  }
+
+  &__web {
+    color: $color-blue;
+  }
+
+  &--footer {
+    color: $color-white;
+  }
+}

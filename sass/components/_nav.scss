@@ -1,0 +1,56 @@
+@import "utils/mixins";
+
+.nav {
+  display: none;
+
+  @include onTablet {
+    display: flex;
+
+    &__list {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      height: 80px;
+
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+
+      transition: 250ms color;
+    }
+
+    &__item:hover {
+      color: $color-blue;
+    }
+  }
+  @include onDesktop {
+    display: flex;
+
+    &__list {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      height: 80px;
+
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+
+      transition: 250ms color;
+    }
+
+    &__item:hover {
+      color: $color-blue;
+    }
+  }
+}

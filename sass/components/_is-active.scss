@@ -1,0 +1,21 @@
+@import "utils/mixins";
+
+.is-active {
+  position: relative;
+
+  color: $color-blue;
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+
+    height: 4px;
+    width: 100%;
+
+    border-radius: 2px;
+
+    background-color: $color-blue;
+  }
+}

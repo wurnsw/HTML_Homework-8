@@ -1,0 +1,249 @@
+@import "utils/variables";
+@import "utils/reset";
+@import "utils/normalize";
+@import "utils/mixins";
+
+.container {
+  margin: 0 auto;
+
+  padding-inline: 15px;
+
+  width: 100%;
+  max-width: 480px;
+
+  @include onTablet {
+    max-width: 768px;
+  }
+
+  @include onDesktop {
+    max-width: 1170px;
+  }
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__logo {
+    @include onTablet {
+      margin-right: 87px;
+    }
+    @include onDesktop {
+      margin-right: 93px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      margin-left: auto;
+    }
+    @include onDesktop {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  @include onTablet {
+    display: flex;
+
+    &__list {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      height: 80px;
+
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+
+      transition: 250ms color;
+    }
+
+    &__item:hover {
+      color: $color-blue;
+    }
+  }
+  @include onDesktop {
+    display: flex;
+
+    &__list {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      height: 80px;
+
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+
+      transition: 250ms color;
+    }
+
+    &__item:hover {
+      color: $color-blue;
+    }
+  }
+}
+
+.is-active {
+  position: relative;
+
+  color: $color-blue;
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+
+    height: 4px;
+    width: 100%;
+
+    border-radius: 2px;
+
+    background-color: $color-blue;
+  }
+}
+
+.contacts {
+  @include onTablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  @include onDesktop {
+    gap: 30px;
+  }
+  &--footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    @include onDesktop {
+      align-items: start;
+
+      gap: 9px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    color: $color-grey;
+
+    @include onTablet {
+      gap: 8px;
+
+      line-height: 14px;
+
+      font-size: 12px;
+    }
+
+    @include onDesktop {
+      gap: 10px;
+
+      line-height: 16px;
+
+      font-size: 14px;
+
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+
+    &--footer {
+      color: $color-link-footer;
+
+      &:nth-child(1) {
+        color: $color-white;
+
+        @include onDesktop {
+          &:hover {
+            color: $color-blue;
+          }
+        }
+      }
+    }
+  }
+  &__icon {
+    color: inherit;
+
+    &--email {
+      width: 14px;
+      height: 10px;
+      @include onDesktop {
+        width: 16px;
+        height: 12px;
+      }
+    }
+
+    &--smartphone {
+      width: 10px;
+      height: 14px;
+      @include onDesktop {
+        height: 16px;
+      }
+    }
+  }
+}
+
+.logo {
+  padding: 15.5px 0;
+
+  display: flex;
+  align-items: center;
+
+  font-family: $font-logo;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  @include onTablet {
+    padding: 0;
+  }
+
+  @include onDesktop {
+    padding: 0;
+  }
+
+  &__web {
+    color: $color-blue;
+  }
+
+  &--footer {
+    color: $color-white;
+  }
+}
