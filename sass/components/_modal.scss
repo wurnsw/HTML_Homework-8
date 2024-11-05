@@ -1,1 +1,120 @@
 @import "utils/mixins";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  opacity: 0;
+
+  transition: opacity 700ms;
+
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+
+    pointer-events: all;
+
+    & .modal__window {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    padding: 40px;
+
+    transform: translate(-50%, -35%);
+
+    width: 450px;
+
+    background-color: $color-white;
+
+    box-shadow: 0px 2px 1px #00000033;
+
+    border-radius: 4px;
+
+    transition: transform 700ms ease-in-out;
+
+    @include onDesktop {
+      width: 528px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    width: 30px;
+
+    background-color: $color-white;
+
+    border: 1px solid #0000001a;
+    border-radius: 50%;
+
+    transition: color 250ms, border-color 250ms;
+
+    &:hover {
+      border-color: $color-blue;
+
+      & .modal__close {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__close {
+    width: 11px;
+    height: 11px;
+
+    color: $color-black;
+
+    transition: 250ms color;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+
+    color: $color-black;
+
+    @include onDesktop {
+      line-height: 23px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,1 +1,144 @@
 @import "utils/mixins";
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  border: 0 none;
+
+  &__label {
+    margin-bottom: 10px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: $color-grey;
+
+    &--message {
+      margin-bottom: 20px;
+    }
+
+    &--terms {
+      margin-bottom: 30px;
+
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.03em;
+
+      color: $color-grey;
+
+      @include onDesktop {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    &:hover {
+      & .form__icon {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__input {
+    padding-left: 42px;
+
+    width: 370px;
+    height: 40px;
+
+    outline: none;
+
+    border: 1px solid #21212133;
+    border-radius: 4px;
+
+    transition: border-color 250ms;
+
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-blue;
+    }
+    &--message {
+      padding: 12px 16px;
+
+      height: 120px;
+      font-family: inherit;
+
+      resize: none;
+
+      &::placeholder {
+        color: #75757580;
+      }
+    }
+
+    @include onDesktop {
+      width: 448px;
+    }
+
+    &--terms {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+
+      &:checked {
+        & ~ .form__icon--checkbox {
+          display: none;
+        }
+
+        & ~ .form__icon--checkbox-checked {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+
+    color: $color-blue;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+
+    width: 18px;
+    height: 18px;
+
+    color: $color-black;
+
+    transition: color 250ms;
+
+    &--checkbox {
+      height: 16px;
+      width: 16px;
+    }
+
+    &--checkbox-checked {
+      display: none;
+
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
