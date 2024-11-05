@@ -1,0 +1,17 @@
+@import "utils/mixins";
+
+.services {
+  display: none;
+
+  @include onDesktop {
+    display: flex;
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
+
+    &__item {
+      position: relative;
+    }
+  }
+}

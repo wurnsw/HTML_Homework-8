@@ -1,0 +1,27 @@
+@import "utils/mixins";
+
+.section {
+  padding: 60px 0;
+
+  @include onDesktop {
+    padding: 94px 0;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    text-align: center;
+
+    line-height: 32px;
+
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.03;
+
+    @include onDesktop {
+      margin: 0 0 50px;
+
+      line-height: 42px;
+      font-size: 36px;
+    }
+  }
+}

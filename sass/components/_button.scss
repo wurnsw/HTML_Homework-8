@@ -1,0 +1,92 @@
+@import "utils/mixins";
+
+.button {
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  line-height: 30px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  background-color: $color-light-violet;
+  color: $color-black;
+
+  border: none;
+  border-radius: 4px;
+
+  transition: all 250ms;
+
+  cursor: pointer;
+
+  @include onDesktop {
+    padding: 0 32px;
+  }
+
+  &--small {
+    padding: 0 22px;
+
+    height: 38px;
+
+    line-height: 26px;
+
+    letter-spacing: 0.03em;
+  }
+
+  &--blue {
+    background-color: $color-blue;
+    color: $color-white;
+
+    border: none;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--subscribe {
+    padding: 0 28px;
+
+    gap: 10px;
+
+    letter-spacing: 0.06em;
+  }
+
+  &--send {
+    padding: 0 52px;
+
+    letter-spacing: 0.06em;
+
+    box-shadow: 0px 4px 4px 0px #00000026;
+  }
+}
+
+.section {
+  padding: 60px 0;
+
+  @include onDesktop {
+    padding: 94px 0;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    text-align: center;
+
+    line-height: 32px;
+
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.03;
+
+    @include onDesktop {
+      margin: 0 0 50px;
+
+      line-height: 42px;
+      font-size: 36px;
+    }
+  }
+}

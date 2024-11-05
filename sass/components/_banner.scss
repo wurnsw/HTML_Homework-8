@@ -1,0 +1,56 @@
+@import "utils/mixins";
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 400px;
+
+  background: linear-gradient(
+      90deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 0%
+    ),
+    url("../images/bg--banner.jpeg"), $background-color;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center top 30%;
+
+  @include onDesktop {
+    height: 600px;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+
+    width: 360px;
+
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0.06em;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $color-white;
+
+    @include onDesktop {
+      width: 696px;
+
+      font-size: 44px;
+      line-height: 60px;
+    }
+  }
+
+  &__button {
+    width: 200px;
+
+    @include onDesktop {
+      width: 216px;
+    }
+  }
+}
