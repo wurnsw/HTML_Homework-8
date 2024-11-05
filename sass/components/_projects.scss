@@ -1,0 +1,41 @@
+@import "utils/mixins";
+
+.projects {
+  &__filters {
+    margin-bottom: 40px;
+
+    @include onTablet {
+      margin-bottom: 30px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include onTablet {
+      flex-direction: row;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      
+    }
+  }
+
+  &__item {
+    @include onTablet {
+      width: 354px;
+    }
+
+    @include onDesktop {
+      width: 370px;
+    }
+  }
+}
