@@ -1,0 +1,92 @@
+@import "utils/mixins";
+
+.social {
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item {
+    color: $color-icon;
+
+    border-radius: 50%;
+
+    @include onDesktop {
+      background-color: $color-white;
+
+      transition: 250ms background-color, 250ms color;
+      &:hover {
+        color: $color-white;
+        background-color: $color-blue;
+      }
+    }
+
+    &--footer {
+      color: $color-white;
+      background-color: $color-icon-footer;
+
+      @include onDesktop {
+        &:hover {
+          color: $color-white;
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &__link {
+    padding: 12px;
+
+    display: flex;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.clients {
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include onDesktop {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    color: $color-icon;
+    background-color: $color-white;
+
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+
+    @include onTablet {
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+        border: 1px solid $color-blue;
+      }
+    }
+
+    @include onDesktop {
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+        border: 1px solid $color-blue;
+      }
+    }
+  }
+}

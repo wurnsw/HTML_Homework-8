@@ -1,0 +1,22 @@
+@import "utils/mixins";
+
+.client {
+  &__link {
+    padding: 16px 51px;
+
+    display: flex;
+
+    @include onTablet {
+      padding: 16px 59px;
+    }
+
+    @include onDesktop {
+      padding: 15px 31px;
+    }
+  }
+
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+}

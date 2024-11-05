@@ -1,0 +1,23 @@
+@import "utils/mixins";
+
+.team {
+  background-color: $color-light-violet;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 30px;
+
+    @include onTablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+}

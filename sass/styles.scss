@@ -517,3 +517,185 @@
     }
   }
 }
+
+.team {
+  background-color: $color-light-violet;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 30px;
+
+    @include onTablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.person {
+  box-shadow: 0px 1px 3px 0px #0000001f;
+
+  border-radius: 4px;
+
+  background-color: $color-white;
+
+  &__image {
+    width: 100%;
+
+    @include onTablet {
+      width: 354px;
+    }
+
+    @include onDesktop {
+      width: 270px;
+    }
+  }
+
+  &__info {
+    padding: 30px 74px 24px;
+    text-align: center;
+
+    @include onDesktop {
+      padding: 30px 32px;
+    }
+  }
+
+  &__name {
+    margin: 0 0 10px;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  &__role {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+
+    color: $color-grey;
+  }
+}
+
+.social {
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item {
+    color: $color-icon;
+
+    border-radius: 50%;
+
+    @include onDesktop {
+      background-color: $color-white;
+
+      transition: 250ms background-color, 250ms color;
+      &:hover {
+        color: $color-white;
+        background-color: $color-blue;
+      }
+    }
+
+    &--footer {
+      color: $color-white;
+      background-color: $color-icon-footer;
+
+      @include onDesktop {
+        &:hover {
+          color: $color-white;
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &__link {
+    padding: 12px;
+
+    display: flex;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.clients {
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include onDesktop {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    color: $color-icon;
+    background-color: $color-white;
+
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+
+    @include onTablet {
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+        border: 1px solid $color-blue;
+      }
+    }
+
+    @include onDesktop {
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+        border: 1px solid $color-blue;
+      }
+    }
+  }
+}
+
+.client {
+  &__link {
+    padding: 16px 51px;
+
+    display: flex;
+
+    @include onTablet {
+      padding: 16px 59px;
+    }
+
+    @include onDesktop {
+      padding: 15px 31px;
+    }
+  }
+
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+}

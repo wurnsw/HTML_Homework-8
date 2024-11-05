@@ -1,0 +1,40 @@
+@import "utils/mixins";
+
+.clients {
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include onDesktop {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    color: $color-icon;
+    background-color: $color-white;
+
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+
+    @include onTablet {
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+        border: 1px solid $color-blue;
+      }
+    }
+
+    @include onDesktop {
+      transition: 250ms color;
+
+      &:hover {
+        color: $color-blue;
+        border: 1px solid $color-blue;
+      }
+    }
+  }
+}
