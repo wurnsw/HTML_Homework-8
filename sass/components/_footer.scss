@@ -1,1 +1,55 @@
 @import "utils/mixins";
+
+.footer {
+  padding: 60px 0;
+
+  background-color: $background-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    @include onTablet {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+
+  &__logo {
+    margin: 0 0 20px;
+
+    justify-content: center;
+
+    @include onDesktop {
+      justify-content: start;
+    }
+  }
+
+  &-title {
+    text-align: center;
+
+    line-height: 16px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $color-white;
+
+    @include onDesktop {
+      text-align: start;
+    }
+  }
+}

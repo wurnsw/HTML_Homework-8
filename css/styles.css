@@ -634,4 +634,116 @@ a {
 .client__icon {
   width: 106px;
   height: 60px;
+}
+
+.footer {
+  padding: 60px 0;
+  background-color: #2f303a;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__content {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+.footer__logo {
+  margin: 0 0 20px;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    justify-content: start;
+  }
+}
+.footer-title {
+  text-align: center;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .footer-title {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    position: relative;
+    width: 570px;
+    height: 86px;
+  }
+}
+.subscribe__title {
+  margin: 0 0 20px;
+}
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.subscribe__input {
+  padding: 15px 16px;
+  height: 50px;
+  width: 450px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3019607843);
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ffffff;
+  transition: border-color 250ms;
+  cursor: pointer;
+}
+.subscribe__input::-moz-placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe__input::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe__input:hover {
+  border-color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 358px;
+  }
+}
+.subscribe__icon-telegram {
+  width: 24px;
+  height: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
