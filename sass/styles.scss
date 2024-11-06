@@ -220,6 +220,8 @@
   }
 
   &--footer {
+    padding: 0;
+
     color: $color-white;
   }
 }
@@ -375,7 +377,7 @@
   &__list {
     @include rowWrap;
     gap: 30px;
-    
+
     @include onDesktop {
       flex-wrap: nowrap;
     }
