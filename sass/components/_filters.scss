@@ -1,20 +1,15 @@
 @import "utils/mixins";
 
 .filters {
-  display: flex;
-  flex-wrap: wrap;
+  @include rowWrap;
   gap: 15px 8px;
 
   @include onTablet {
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 8px;
+    @include filters;
   }
 
   @include onDesktop {
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 8px;
+    @include filters;
   }
 
   &__button {

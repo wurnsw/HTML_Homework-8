@@ -1,9 +1,7 @@
 @import "utils/mixins";
 
 .banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include columnCentering;
   align-items: center;
 
   height: 400px;
@@ -13,7 +11,7 @@
       rgba(47, 48, 58, 0.4) 0%,
       rgba(47, 48, 58, 0.4) 0%
     ),
-    url("../images/bg--banner.jpeg"), $background-color;
+    url("../images/bg--banner.jpg"), $background-color;
 
   background-repeat: no-repeat;
   background-size: cover;

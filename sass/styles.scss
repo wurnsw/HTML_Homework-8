@@ -43,12 +43,10 @@
     display: none;
 
     @include onTablet {
-      display: flex;
-      margin-left: auto;
+      @include headerContacts;
     }
     @include onDesktop {
-      display: flex;
-      margin-left: auto;
+      @include headerContacts;
     }
   }
 }
@@ -60,21 +58,11 @@
     display: flex;
 
     &__list {
-      display: flex;
-      gap: 50px;
+      @include navList;
     }
 
     &__link {
-      display: flex;
-      align-items: center;
-
-      height: 80px;
-
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.02em;
-
-      transition: 250ms color;
+      @include navLink;
     }
 
     &__item:hover {
@@ -85,21 +73,11 @@
     display: flex;
 
     &__list {
-      display: flex;
-      gap: 50px;
+      @include navList;
     }
 
     &__link {
-      display: flex;
-      align-items: center;
-
-      height: 80px;
-
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.02em;
-
-      transition: 250ms color;
+      @include navLink;
     }
 
     &__item:hover {
@@ -130,9 +108,7 @@
 
 .contacts {
   @include onTablet {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include columnCentering;
     gap: 10px;
   }
 
@@ -140,9 +116,7 @@
     gap: 30px;
   }
   &--footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include columnCentering;
     align-items: center;
 
     gap: 8px;
@@ -162,7 +136,7 @@
     font-weight: 500;
     letter-spacing: 0.02em;
 
-    color: $color-grey;
+    color: $color-gray;
 
     @include onTablet {
       gap: 8px;
@@ -251,9 +225,7 @@
 }
 
 .banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include columnCentering;
   align-items: center;
 
   height: 400px;
@@ -401,9 +373,7 @@
     padding-bottom: 0;
   }
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    @include rowWrap;
 
     @include onDesktop {
       flex-wrap: nowrap;
@@ -422,9 +392,7 @@
   &__image {
     margin-bottom: 30px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentering;
 
     height: 120px;
 
@@ -459,12 +427,7 @@
   }
 
   &__description {
-    line-height: 24px;
-
-    font-size: 14px;
-    letter-spacing: 0.03em;
-
-    color: $color-grey;
+    @include grayTypography;
   }
 }
 
@@ -493,9 +456,7 @@
     }
 
     &__overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      @include zeroPosition;
 
       height: 70px;
       width: 370px;
@@ -524,20 +485,16 @@
   background-color: $color-light-violet;
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include columnCentering;
 
     gap: 30px;
 
     @include onTablet {
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include rowWrap;
     }
 
     @include onDesktop {
-      flex-direction: row;
-      flex-wrap: nowrap;
+      @include noWrap;
     }
   }
 }
@@ -573,20 +530,17 @@
   &__name {
     margin: 0 0 10px;
 
-    font-size: 16px;
-    line-height: 18px;
+    @include personTypography;
+
     font-weight: 500;
-    letter-spacing: 0.03em;
   }
 
   &__role {
     margin-bottom: 16px;
 
-    font-size: 16px;
-    line-height: 18px;
-    letter-spacing: 0.03em;
+    @include personTypography;
 
-    color: $color-grey;
+    color: $color-gray;
   }
 }
 
@@ -596,9 +550,8 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentering;
+
     gap: 10px;
   }
 
@@ -708,10 +661,8 @@
   background-color: $background-color;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include columnCentering;
     justify-content: space-between;
-    align-items: center;
 
     gap: 60px;
 
@@ -768,8 +719,7 @@
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    @include columnCentering;
     align-items: center;
     gap: 20px;
   }
@@ -806,9 +756,7 @@
     }
 
     @include onDesktop {
-      position: absolute;
-      left: 0;
-      bottom: 0;
+      @include zeroPosition;
 
       width: 358px;
     }
@@ -852,10 +800,8 @@
   }
 
   &__overlay {
-    position: absolute;
+    @include zeroPosition;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
 
     background-color: rgba(0, 0, 0, 0.2);
@@ -955,6 +901,7 @@
 
   &__label {
     margin-bottom: 10px;
+
     position: relative;
 
     display: flex;
@@ -965,7 +912,7 @@
     line-height: 14px;
     letter-spacing: 0.01em;
 
-    color: $color-grey;
+    color: $color-gray;
 
     &--message {
       margin-bottom: 20px;
@@ -974,16 +921,15 @@
     &--terms {
       margin-bottom: 30px;
 
+      @include flexCentering;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
       gap: 8px;
 
       font-size: 12px;
       line-height: 14px;
       letter-spacing: 0.03em;
 
-      color: $color-grey;
+      color: $color-gray;
 
       @include onDesktop {
         font-size: 14px;
@@ -1091,20 +1037,15 @@
 }
 
 .filters {
-  display: flex;
-  flex-wrap: wrap;
+  @include rowWrap;
   gap: 15px 8px;
 
   @include onTablet {
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 8px;
+    @include filters;
   }
 
   @include onDesktop {
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 8px;
+    @include filters;
   }
 
   &__button {
@@ -1254,6 +1195,6 @@
     font-size: 16px;
     letter-spacing: 0.03em;
 
-    color: $color-grey;
+    color: $color-gray;
   }
 }

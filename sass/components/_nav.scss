@@ -7,21 +7,11 @@
     display: flex;
 
     &__list {
-      display: flex;
-      gap: 50px;
+      @include navList;
     }
 
     &__link {
-      display: flex;
-      align-items: center;
-
-      height: 80px;
-
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.02em;
-
-      transition: 250ms color;
+      @include navLink;
     }
 
     &__item:hover {
@@ -32,21 +22,11 @@
     display: flex;
 
     &__list {
-      display: flex;
-      gap: 50px;
+      @include navList;
     }
 
     &__link {
-      display: flex;
-      align-items: center;
-
-      height: 80px;
-
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.02em;
-
-      transition: 250ms color;
+      @include navLink;
     }
 
     &__item:hover {

@@ -6,10 +6,8 @@
   background-color: $background-color;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include columnCentering;
     justify-content: space-between;
-    align-items: center;
 
     gap: 60px;
 

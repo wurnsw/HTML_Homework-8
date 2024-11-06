@@ -4,20 +4,16 @@
   background-color: $color-light-violet;
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include columnCentering;
 
     gap: 30px;
 
     @include onTablet {
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include rowWrap;
     }
 
     @include onDesktop {
-      flex-direction: row;
-      flex-wrap: nowrap;
+      @include noWrap;
     }
   }
 }

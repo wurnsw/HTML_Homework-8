@@ -11,9 +11,7 @@
   &__image {
     margin-bottom: 30px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentering;
 
     height: 120px;
 
@@ -48,11 +46,6 @@
   }
 
   &__description {
-    line-height: 24px;
-
-    font-size: 14px;
-    letter-spacing: 0.03em;
-
-    color: $color-grey;
+    @include grayTypography;
   }
 }

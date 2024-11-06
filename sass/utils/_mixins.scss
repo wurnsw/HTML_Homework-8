@@ -1,4 +1,3 @@
-
 @mixin onMobile {
   @media screen and (max-width: 576px) {
     @content;
@@ -15,4 +14,78 @@
   @media screen and (min-width: 1200px) {
     @content;
   }
-} 
+}
+
+@mixin headerContacts {
+  display: flex;
+  margin-left: auto;
+}
+
+@mixin navList {
+  display: flex;
+  gap: 50px;
+}
+
+@mixin navLink {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  transition: 250ms color;
+}
+
+@mixin columnCentering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin grayTypography {
+  line-height: 24px;
+
+  font-size: 14px;
+  letter-spacing: 0.03em;
+
+  color: $color-grey;
+}
+
+@mixin flexCentering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin zeroPosition {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin rowWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin noWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@mixin personTypography {
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+}
+
+@mixin filters {
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}

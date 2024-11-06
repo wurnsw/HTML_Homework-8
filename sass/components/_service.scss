@@ -9,9 +9,7 @@
     }
 
     &__overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      @include zeroPosition;
 
       height: 70px;
       width: 370px;

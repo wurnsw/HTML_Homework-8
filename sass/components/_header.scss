@@ -21,12 +21,10 @@
     display: none;
 
     @include onTablet {
-      display: flex;
-      margin-left: auto;
+      @include headerContacts;
     }
     @include onDesktop {
-      display: flex;
-      margin-left: auto;
+      @include headerContacts;
     }
   }
 }
