@@ -377,6 +377,7 @@ a {
 }
 .features__list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -428,7 +429,10 @@ a {
   }
 }
 .feature__description {
-  @i;
+  line-height: 24px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .services {
@@ -484,12 +488,14 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .team__list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
   .team__list {
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
@@ -526,8 +532,8 @@ a {
   margin: 0 0 10px;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
   letter-spacing: 0.03em;
+  font-weight: 500;
 }
 .person__role {
   margin-bottom: 16px;
@@ -641,8 +647,8 @@ a {
 .footer__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   justify-content: space-between;
-  align-items: center;
   gap: 60px;
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -696,6 +702,7 @@ a {
 .subscribe__form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -729,8 +736,8 @@ a {
 @media screen and (min-width: 1200px) {
   .subscribe__input {
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 358px;
   }
 }
@@ -765,9 +772,9 @@ a {
 }
 .modal__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
+  top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -856,9 +863,10 @@ a {
 }
 .form__label--terms {
   margin-bottom: 30px;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   gap: 8px;
   font-size: 12px;
   line-height: 14px;
@@ -948,6 +956,7 @@ a {
 
 .filters {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 15px 8px;
 }

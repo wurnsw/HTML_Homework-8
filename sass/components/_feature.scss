@@ -46,6 +46,11 @@
   }
 
   &__description {
-    @include grayTypography;
+    line-height: 24px;
+
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    color: $color-gray;
   }
 }

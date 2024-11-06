@@ -374,7 +374,8 @@
   }
   &__list {
     @include rowWrap;
-
+    gap: 30px;
+    
     @include onDesktop {
       flex-wrap: nowrap;
     }
@@ -427,7 +428,12 @@
   }
 
   &__description {
-    @include grayTypography;
+    line-height: 24px;
+
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    color: $color-gray;
   }
 }
 
