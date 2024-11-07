@@ -1059,7 +1059,7 @@ a {
 .project:hover .project__overlay {
   transform: translateY(0);
 }
-.project__container {
+.project__image-container {
   position: relative;
   overflow: hidden;
 }
