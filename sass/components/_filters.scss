@@ -8,10 +8,6 @@
     @include filters;
   }
 
-  @include onDesktop {
-    @include filters;
-  }
-
   &__button {
     &--active {
       padding: 0 25px;

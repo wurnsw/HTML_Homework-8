@@ -22,10 +22,6 @@
     @include onTablet {
       flex-direction: row;
     }
-
-    @include onDesktop {
-      flex-direction: row;
-    }
   }
 
   &__item {

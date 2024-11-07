@@ -39,10 +39,6 @@
     @include onTablet {
       text-align: start;
     }
-
-    @include onDesktop {
-      text-align: start;
-    }
   }
 
   &__description {

@@ -19,7 +19,6 @@
     }
 
     @include onDesktop {
-      flex-direction: row;
       align-items: baseline;
     }
   }

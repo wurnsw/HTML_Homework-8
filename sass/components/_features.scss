@@ -5,13 +5,9 @@
     padding-bottom: 0;
   }
   &__list {
-  
-    gap: 30px;
     @include rowWrap;
-
-    @include onTablet {
-  
-    }
+    gap: 30px;
+    
     @include onDesktop {
       flex-wrap: nowrap;
     }

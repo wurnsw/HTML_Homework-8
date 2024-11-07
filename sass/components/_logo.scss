@@ -15,10 +15,6 @@
     padding: 0;
   }
 
-  @include onDesktop {
-    padding: 0;
-  }
-
   &__web {
     color: $color-blue;
   }
