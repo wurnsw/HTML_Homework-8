@@ -1,10 +1,8 @@
-@import "utils/mixins";
+@import "../utils/mixins";
 
 .clients {
   &__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include rowWrap;
     gap: 30px;
 
     @include onDesktop {
@@ -13,6 +11,12 @@
   }
 
   &__item {
+    @include flexCentering;
+
+    max-width: 226px;
+    width: calc((100% / 2) - (30px / 2));
+    height: 92px;
+
     color: $color-icon;
     background-color: $color-white;
 
@@ -29,12 +33,7 @@
     }
 
     @include onDesktop {
-      transition: 250ms color;
-
-      &:hover {
-        color: $color-blue;
-        border: 1px solid $color-blue;
-      }
+      cursor: pointer;
     }
   }
 }

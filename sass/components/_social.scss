@@ -1,4 +1,4 @@
-@import "utils/mixins";
+@import "../utils/mixins";
 
 .social {
   &__title {
@@ -7,7 +7,7 @@
 
   &__list {
     @include flexCentering;
-    
+
     gap: 10px;
   }
 

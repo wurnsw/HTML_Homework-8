@@ -1,4 +1,5 @@
-@import "utils/mixins";
+@import "../utils/mixins";
+@import "../utils/variables";
 
 .project {
   display: flex;
@@ -69,6 +70,8 @@
 
     border: 1px solid $color-projects-border;
     border-top: none;
+
+    flex-grow: 1;
   }
 
   &__name {
@@ -87,6 +90,6 @@
     font-size: 16px;
     letter-spacing: 0.03em;
 
-    color: $color-grey;
+    color: $color-gray;
   }
 }

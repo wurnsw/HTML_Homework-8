@@ -1,4 +1,4 @@
-@import "utils/mixins";
+@import "../utils/mixins";
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -21,9 +21,6 @@
     display: none;
 
     @include onTablet {
-      @include headerContacts;
-    }
-    @include onDesktop {
       @include headerContacts;
     }
   }

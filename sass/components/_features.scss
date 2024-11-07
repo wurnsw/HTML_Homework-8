@@ -1,12 +1,17 @@
-@import "utils/mixins";
+@import "../utils/mixins";
 
 .features {
   @include onDesktop {
     padding-bottom: 0;
   }
   &__list {
+  
+    gap: 30px;
     @include rowWrap;
 
+    @include onTablet {
+  
+    }
     @include onDesktop {
       flex-wrap: nowrap;
     }

@@ -1,4 +1,4 @@
-@import "utils/mixins";
+@import "../utils/mixins";
 
 .projects {
   &__filters {
@@ -25,7 +25,6 @@
 
     @include onDesktop {
       flex-direction: row;
-      
     }
   }
 
