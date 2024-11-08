@@ -65,6 +65,18 @@ a {
     margin-right: 93px;
   }
 }
+.header__burger-menu-icon {
+  position: sticky;
+  top: 22px;
+  right: 23px;
+  width: 24px;
+  height: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header__burger-menu-icon {
+    display: none;
+  }
+}
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -1050,16 +1062,6 @@ a {
   letter-spacing: 0.03em;
   line-height: 28px;
   color: #ffffff;
-}
-@media screen and (min-width: 768px) {
-  .project__description {
-    padding: 49px 24px 77px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .project__description {
-    padding: 63px 24px;
-  }
 }
 .project__info {
   padding: 20px 24px;
