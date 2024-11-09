@@ -20,6 +20,13 @@
           <a class="header__logo logo" href="./index.html">
             <span class="logo__web"> Web</span>Studio
           </a>
+
+          <a href="#menu">
+            <svg class="header__burger-menu-icon">
+              <use href="./images/sprite.svg#menu"></use>
+            </svg>
+          </a>
+
           <nav class="header__nav nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -50,6 +57,67 @@
         </div>
       </div>
     </header>
+
+    <aside class="aside" id="menu">
+      <a href="#">
+        <svg class="aside__close-menu-icon">
+          <use href="./images/sprite.svg#menuClose"></use>
+        </svg>
+      </a>
+
+      <div class="aside__burger-menu">
+        <nav class="aside__nav nav">
+          <ul class="nav__list nav__list--burger-menu">
+            <li class="nav__item">
+              <a class="nav__link nav__link--burger-menu" href="./index.html">
+                Студія
+              </a>
+            </li>
+            <li class="nav__item is-active">
+              <a class="nav__link nav__link--burger-menu" href="#">
+                Портфоліо
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--burger-menu" href="#">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="aside__contacts">
+          <address class="contacts">
+            <a
+              class="contacts__link contacts__link--burger-menu"
+              href="tel:+380961111111"
+            >
+              +38 096 111 11 11
+            </a>
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </address>
+
+          <ul class="aside__social">
+            <li class="aside__social-item">
+              <a class="aside__social-link" href="#">Instagram </a>
+            </li>
+            <li class="aside__social-item">
+              <a class="aside__social-link" href="#">Twiter</a>
+            </li>
+
+            <li class="aside__social-item">
+              <a class="aside__social-link" href="#">Facebook</a>
+            </li>
+
+            <li class="aside__social-item">
+              <a class="aside__social-link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
 
     <main class="main">
       <section class="section projects">
