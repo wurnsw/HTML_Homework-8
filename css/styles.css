@@ -1116,7 +1116,7 @@ a {
   left: 0;
   padding: 48px 40px;
   background-color: #ffffff;
-  max-width: 480px;
+  width: 100%;
   opacity: 0;
   transition: opacity 250ms;
   pointer-events: none;
