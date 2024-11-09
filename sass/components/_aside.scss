@@ -1,0 +1,78 @@
+@import "../utils/mixins";
+
+.aside {
+  position: fixed;
+  @include zeroPosition;
+
+  padding: 48px 40px;
+
+  background-color: $color-white;
+
+  max-width: 480px;
+
+  opacity: 0;
+
+  transition: opacity 250ms;
+
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+
+    pointer-events: all;
+  }
+
+  &__burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__close-menu-icon {
+    position: absolute;
+    @include burgerIcon;
+
+    color: $color-black;
+
+    &:active {
+      color: $color-blue;
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item {
+    padding: 0 10px;
+    border-right: 1px solid #21212133;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      border: none;
+    }
+  }
+
+  &__social-link {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    color: $color-blue;
+  }
+
+  @include onTablet {
+    display: none;
+  }
+}

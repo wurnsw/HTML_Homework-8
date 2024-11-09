@@ -23,16 +23,33 @@
   }
 
   &__link {
+    margin-bottom: 64px;
+
     display: flex;
     align-items: center;
 
+    line-height: 28px;
+
     font-style: normal;
+    font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.02em;
 
     color: $color-gray;
 
+    &--burger-menu {
+      margin-bottom: 32px;
+
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 39px;
+      letter-spacing: 0.02em;
+
+      color: $color-blue;
+    }
     @include onTablet {
+      margin: 0;
+      
       gap: 8px;
 
       line-height: 14px;

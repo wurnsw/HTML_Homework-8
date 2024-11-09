@@ -12,18 +12,6 @@
     }
   }
 
-  &__burger-menu-icon {
-    position: sticky;
-    top: 22px;
-    right: 23px;
-
-    width: 24px;
-    height: 16px;
-
-    @include onTablet {
-      display: none;
-    }
-  }
   &__content {
     display: flex;
     justify-content: space-between;
@@ -34,6 +22,15 @@
 
     @include onTablet {
       @include headerContacts;
+    }
+  }
+
+  &__burger-menu-icon {
+    position: sticky;
+    @include burgerIcon;
+
+    @include onTablet {
+      display: none;
     }
   }
 }

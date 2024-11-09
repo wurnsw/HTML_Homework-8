@@ -5,23 +5,37 @@
 
   @include onTablet {
     display: flex;
+  }
 
-    &__list {
+  &__list {
+    &--burger-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+    @include onTablet {
       @include navList;
     }
+  }
 
-    &__link {
-      @include navLink;
-    }
-
-    &__item:hover {
-      color: $color-blue;
+  &__item {
+    @include onTablet {
+      &:hover {
+        color: $color-blue;
+      }
     }
   }
-  @include onDesktop {
 
-    &__item:hover {
-      color: $color-blue;
+  &__link {
+    &--burger-menu {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 46.88px;
+      letter-spacing: 0.02em;
+    }
+
+    @include onTablet {
+      @include navLink;
     }
   }
 }
