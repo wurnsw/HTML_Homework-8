@@ -49,29 +49,30 @@
 
   &__social {
     display: flex;
-  }
+    flex-wrap: wrap;
+    gap: 10px 0;
 
-  &__social-item {
-    padding: 0 10px;
-    border-right: 1px solid #21212133;
+    &-item {
+      padding: 0 10px;
+      border-right: 1px solid #21212133;
 
-    &:first-child {
-      padding-left: 0;
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+
+        border: none;
+      }
     }
+    &-link {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
 
-    &:last-child {
-      padding-right: 0;
-
-      border: none;
+      color: $color-blue;
     }
-  }
-
-  &__social-link {
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-
-    color: $color-blue;
   }
 
   @include onTablet {

@@ -1148,6 +1148,8 @@ a {
 }
 .aside__social {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px 0;
 }
 .aside__social-item {
   padding: 0 10px;
