@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
     <title>WebStudio</title>
   </head>
 
-  <body>
+  <body class="page__body">
     <header class="header">
       <div class="container">
         <div class="header__content">
@@ -58,63 +58,70 @@
       </div>
     </header>
 
-    <aside class="aside" id="menu">
-      <a href="#">
-        <svg class="aside__close-menu-icon">
-          <use href="./images/sprite.svg#menuClose"></use>
-        </svg>
-      </a>
+    <aside class="burger-menu" id="menu">
+      <div class="container">
+        <div class="burger-menu__content">
+          <a href="#">
+            <svg class="burger-menu__close-menu-icon">
+              <use href="./images/sprite.svg#menuClose"></use>
+            </svg>
+          </a>
 
-      <div class="aside__burger-menu">
-        <nav class="aside__nav nav">
-          <ul class="nav__list nav__list--burger-menu">
-            <li class="nav__item">
-              <a class="nav__link nav__link--burger-menu" href="./index.html">
-                Студія
-              </a>
-            </li>
-            <li class="nav__item is-active">
-              <a class="nav__link nav__link--burger-menu" href="#">
-                Портфоліо
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--burger-menu" href="#">
-                Контакти
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <div class="burger-menu__container">
+            <nav class="burger-menu__nav nav">
+              <ul class="nav__list nav__list--burger-menu">
+                <li class="nav__item">
+                  <a
+                    class="nav__link nav__link--burger-menu"
+                    href="./index.html"
+                  >
+                    Студія
+                  </a>
+                </li>
+                <li class="nav__item is-active">
+                  <a class="nav__link nav__link--burger-menu" href="#">
+                    Портфоліо
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--burger-menu" href="#">
+                    Контакти
+                  </a>
+                </li>
+              </ul>
+            </nav>
 
-        <div class="aside__contacts">
-          <address class="contacts">
-            <a
-              class="contacts__link contacts__link--burger-menu"
-              href="tel:+380961111111"
-            >
-              +38 096 111 11 11
-            </a>
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              info@devstudio.com
-            </a>
-          </address>
+            <div class="burger-menu__contacts">
+              <address class="contacts">
+                <a
+                  class="contacts__link contacts__link--burger-menu"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11
+                </a>
+                <a class="contacts__link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </address>
 
-          <ul class="aside__social">
-            <li class="aside__social-item">
-              <a class="aside__social-link" href="#">Instagram </a>
-            </li>
-            <li class="aside__social-item">
-              <a class="aside__social-link" href="#">Twiter</a>
-            </li>
+              <ul class="burger-menu__social">
+                <li class="burger-menu__social-item">
+                  <a class="burger-menu__social-link" href="#">Instagram </a>
+                </li>
+                <li class="burger-menu__social-item">
+                  <a class="burger-menu__social-link" href="#">Twiter</a>
+                </li>
 
-            <li class="aside__social-item">
-              <a class="aside__social-link" href="#">Facebook</a>
-            </li>
+                <li class="burger-menu__social-item">
+                  <a class="burger-menu__social-link" href="#">Facebook</a>
+                </li>
 
-            <li class="aside__social-item">
-              <a class="aside__social-link" href="#">LinkedIn</a>
-            </li>
-          </ul>
+                <li class="burger-menu__social-item">
+                  <a class="burger-menu__social-link" href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </aside>

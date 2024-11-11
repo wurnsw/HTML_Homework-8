@@ -1139,7 +1139,7 @@ a {
   position: relative;
   height: calc(100svh - 48px);
 }
-.burger-menu__burger-menu {
+.burger-menu__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
