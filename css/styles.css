@@ -1137,7 +1137,7 @@ a {
   padding: 48px 0 0;
   padding-left: 25px;
   position: relative;
-  height: calc(100vh - 48px);
+  height: calc(100svh - 48px);
 }
 .burger-menu__burger-menu {
   display: flex;
