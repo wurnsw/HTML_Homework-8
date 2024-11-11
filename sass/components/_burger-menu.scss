@@ -1,14 +1,16 @@
 @import "../utils/mixins";
 
-.aside {
+.burger-menu {
   position: fixed;
-  @include zeroPosition;
 
-  padding: 48px 40px;
-
-  background-color: $color-white;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   width: 100vw;
+  height: 100vh;
+
+  background-color: $color-white;
 
   opacity: 0;
 
@@ -22,6 +24,15 @@
     opacity: 1;
 
     pointer-events: all;
+  }
+
+  &__content {
+    padding: 48px 0 0;
+    padding-left: 25px;
+
+    position: relative;
+
+    height: calc(100vh - 48px);
   }
 
   &__burger-menu {

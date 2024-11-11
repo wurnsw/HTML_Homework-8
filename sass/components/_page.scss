@@ -1,0 +1,10 @@
+.page {
+  font-family: $font-main;
+  color: $color-black;
+  
+  &__body {
+    &:has(.burger-menu:target) {
+      overflow: hidden;
+    }
+  }
+}

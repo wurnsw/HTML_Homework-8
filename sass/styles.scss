@@ -2,8 +2,11 @@
 @import "utils/reset";
 @import "utils/normalize";
 @import "utils/mixins";
+
+@import "components/page";
 @import "components/container";
 @import "components/header";
+
 @import "components/nav";
 @import "components/is-active";
 @import "components/contacts";
@@ -27,4 +30,4 @@
 @import "components/filters";
 @import "components/projects";
 @import "components/project";
-@import "components/aside";
+@import "components/burger-menu";
