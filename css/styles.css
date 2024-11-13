@@ -287,6 +287,22 @@ a {
   background-size: cover;
   background-position: center, center top 30%;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%), url("../images/bg--banner-@2x.webp"), #2f303a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center top 30%;
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .banner {
+    background: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%), url("../images/bg--banner-@3x.webp"), #2f303a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center top 30%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .banner {
     height: 600px;

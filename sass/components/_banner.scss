@@ -13,9 +13,11 @@
     ),
     url("../images/bg--banner.webp"), $background-color;
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center, center top 30%;
+  @include bannerBackground;
+
+  @include bg-pixelRatio-2;
+
+  @include bg-pixelRatio-3;
 
   @include onDesktop {
     height: 600px;
